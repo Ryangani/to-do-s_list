@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
-const API_URL = 'http://localhost:5000/todos';
+const API_URL = process.env.NODE_ENV === 'production' ? '/api/todos' : 'http://localhost:5000/todos';
 
 // Time blocks with motivational quotes and theme colors
 const TIME_BLOCKS = {
